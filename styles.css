@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1e1e2f, #2a2a40, #3a3a5a);
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+   
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+   
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f9d423;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.hero {
+    text-align: left; /* Align text to the left on larger screens */
+    padding: 100px 20px;
+    color: white;
+    background: linear-gradient(135deg, #1b1b2b, #2f2f47);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left on larger screens */
+    height: 70vh; /* Ensure it's vertically centered */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;  /* Reduced margin */
+    margin-top: -120px;    /* Move the title a little higher */
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;  /* Reduced margin */
+    margin-top: -10px;    /* Move the paragraph a little higher */
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left on larger screens */
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buy {
+    background: #f9d423;
+    color: #333;
+}
+
+.learn {
+    background: #ff4e50;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.features, .pricing, .profile {
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.feature-list, .pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item, .card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover, .card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    text-align: center;
+}
+
+.card .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f9d423;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.profile-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-btn {
+    background: #f9d423;
+    color: #333;
+}
+
+footer {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .feature-item, .card {
+        width: 100%;
+    }
+
+    .hero {
+        text-align: center; /* Center text on smaller screens */
+        padding: 50px 20px;
+        align-items: center; /* Center align items on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .buttons {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+
+    .btn {
+        font-size: 16px; /* Adjust button size on smaller screens */
+    }
+}
+
+/* Feature Item with yellow-green gradient */
+.feature-item {
+    background-image: linear-gradient(to left, yellow, green);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
